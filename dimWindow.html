@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Dimeaon Panel</title>
+        <meta charset="UTF-8">
         <style type="text/css">
             html, body 
             {
@@ -11,16 +12,28 @@
             border:none
             }
         </style>
+        <script src="./atmosphere.js"></script>
+        <script src="./customized.js"></script>
+        <script src="./pregnant.js"></script>
         <script>
             const ipcRenderer = require('electron').ipcRenderer;
             ipcRenderer.on('win', function(e, item){
-                const h2 = document.querySelector("h2");
-                h2.innerHTML = item;
+                if(item == "Atmosphere"){
+                    astmosphere();
+                } else if(item == "Customized"){
+                    customized();
+                } else {
+                    pregnant();
+                }
             });
         </script>
     </head>
     <body>
-        <h1>Dimeaon windows</h1>
-        <h2></h2>
+        <table width="100%">
+            <tr height="50">
+                <td style="background-color:darkcyan; text-align: center;" colspan="3">Help Banner</td>
+            </tr>
+        </table>
+        <div id="container"></div></td>
     </body>
 </html>
