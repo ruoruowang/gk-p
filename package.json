@@ -1,0 +1,14 @@
+{
+  "name": "gk-p",
+  "version": "1.0.0",
+  "description": "Guang Kai Program",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Wang Ruoruo",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^15.3.1"
+  }
+}
